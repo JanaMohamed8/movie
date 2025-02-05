@@ -1,0 +1,19 @@
+h1 {
+    font-size: 72px;
+    background: -webkit-linear-gradient( #002bff, #7a00ff, #ff0000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+ .container{
+    padding-bottom: 70px;
+ }
+ .inputs{
+    padding-top: 30px;
+ }
+ 
+ .Btn{
+   position: absolute;
+   right: 60px;
+   top:35px
+ }
+ 

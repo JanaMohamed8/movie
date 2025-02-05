@@ -1,0 +1,32 @@
+
+
+<section id="display" class="p-4 mt-4 mx-5">
+  <a routerLink='/poster'> <button class="glow-on-hover ms-4 Btn" type="button" >Go Home</button></a>
+  <h2 class="text-white m-auto text-center text-uppercase py-2"> Trending Movies</h2>
+  <div class="container pt-5">
+    <div class="row g-4">
+
+      @for (movie of movies; track movies) {
+        <div class="col-lg-3 col-md-6">
+             <div class="position-relative">
+              <img [src]="mainSrc+movie.poster_path" [alt]="movie.original_title" class="w-100 d-block rounded shadow-img">
+              <div class="layer text-center">
+               <h3 class="fs-5">
+            
+                @if (movie.name != undefined) {
+                  {{movie.name}}
+                }@else {
+                  {{movie.title}}
+                }
+               </h3>
+               <p class="lead fs-6 px-2"> {{movie.overview}}</p>
+               <p class="text-warning vote"><i class="fa-solid fa-star  "></i> {{movie.vote_average}} </p>
+               <a ><i class="fa-solid fa-circle-play"></i></a>
+              </div>
+             </div>           
+        </div>
+      }
+
+    </div>
+  </div>
+</section>
